@@ -1,0 +1,26 @@
+<div class="well">
+    <h4>This is an online system to ask any question</h4>
+    <p>A dedicated site to question about anything</p>
+</div>
+<div class="container">
+    <% @questions.each do |q|%>
+    <div class="lead">
+        <div class="media">
+            <div class="media-left">
+                <a href="#">
+                    <img class="media-object" src="<%= q.gravatar %>"></img>
+                </a>
+            </div>
+
+            <div class="media-body">
+                <h4 class="media-heading"><%= q.email %> asked: </h4>
+                <div><%= time_ago_in_words q.created_at %></div>
+                <%= q.body %>
+            </div>
+            <div>
+              <a href="<%= question_path(q)%>" class="btn btn-success btn-xs">View Answers</a>
+            </div>
+        </div>
+    </div>
+    <% end %>
+</div>
