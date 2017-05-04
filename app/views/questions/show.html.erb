@@ -37,7 +37,10 @@
                     </div>
                 </div>
             <% end %>
-
+            
+            <% if @answers.empty? %>
+                <div class="alert alert-info">No answers yet</div>
+            <%end%>
 
             <%= render 'home/new_answer_form' %>
 

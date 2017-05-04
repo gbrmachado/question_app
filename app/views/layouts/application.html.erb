@@ -2,6 +2,7 @@
 <html>
 <head>
   <title>Answer App</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <!-- Latest compiled and minified CSS -->
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
@@ -11,16 +12,10 @@
 </head>
 <body>
 
-
-
-
-<!-- Button trigger modal -->
-
   <%= render 'home/navbar' %>
-  <%= yield %>
-
   
-</div>
+  <%= yield %>
+  
   <%= render 'home/new_question_form' %>
 
 </body>
